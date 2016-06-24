@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="ModernUINavigationApp1.Pages.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:dlg="clr-namespace:ModernUINavigationApp1.Dialog"
+             xmlns:cmd="clr-namespace:ModernUINavigationApp1.Command"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500">
+    <UserControl.Resources>
+        <cmd:OpenHowToUseCommand x:Key="OpenWindowCommand" />
+    </UserControl.Resources>
+    <Grid Style="{StaticResource ContentRoot}">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Margin="20 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Image Height="35" HorizontalAlignment="Left">
+                        <Image.Source>
+                            <DrawingImage>
+                                <DrawingImage.Drawing>
+                                    <GeometryDrawing Brush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                        <GeometryDrawing.Geometry>
+                                            F1 M 25,27L 46,19L 46,22.25L 28.5,29L 31.75,31.25L 51,23.75L 51,48.5L 31.75,57L 25,52L 25,27 Z M 41.8929,46.0327C 40.9009,46.4197 40.0967,47.5376 40.0967,48.5296C 40.0967,49.5216 40.9009,50.0121 41.8929,49.6251C 42.8849,49.2381 43.6891,48.1202 43.6891,47.1282C 43.6891,46.1361 42.8849,45.6457 41.8929,46.0327 Z M 42.2521,31.5228C 39.0777,32.7612 36.5042,36.1777 36.5042,39.1538L 36.5042,39.8723L 40.0967,38.4708L 40.0967,37.3931C 40.0967,36.2027 41.0617,34.8612 42.2521,34.3968C 43.4425,33.9324 44.4076,34.5209 44.4076,35.7113C 44.4076,36.2305 44.4076,36.4298 42.9706,38.4274C 42.2521,39.4262 40.0967,41.7753 40.0967,44.2187L 40.0967,45.2964L 43.6891,43.895L 43.6891,42.458C 43.6891,41.2676 44.4076,40.0223 45.8445,38.7432C 47.2815,37.4641 48,35.3876 48,34.3099C 48,31.3338 45.4266,30.2844 42.2521,31.5228 Z
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+                                </DrawingImage.Drawing>
+                            </DrawingImage>
+                        </Image.Source>
+                    </Image>
+                    <TextBlock Style="{StaticResource Heading1}" Grid.Column="1" VerticalAlignment="Center" Margin="10 0">
+                        How to use
+                    </TextBlock>
+                </Grid>
+                <FlowDocumentScrollViewer Grid.Row="1">
+                    <FlowDocumentScrollViewer.Style>
+                        <Style TargetType="FlowDocumentScrollViewer">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                        </Style>
+                    </FlowDocumentScrollViewer.Style>
+                    <FlowDocument>
+                        <List MarkerStyle="Decimal" FontFamily="나눔고딕">
+                            <ListItem>
+                                <Paragraph>Input에 식을 입력하고 &#8629;버튼을 누릅니다.</Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>Truth Table을 눌러 결과를 확인합니다.</Paragraph>
+                            </ListItem>
+                        </List>
+                    </FlowDocument>
+                </FlowDocumentScrollViewer>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBlock Style="{StaticResource Heading2}">Operator Precedences</TextBlock>
+                <TextBlock HorizontalAlignment="Right" FontSize="18">
+                    ↔ &lt; → &lt; ∨ &lt; ∧ &lt; &#8853; &lt; ￢
+                </TextBlock>
+            </Grid>
+        </Grid>
+        <StackPanel Orientation="Vertical" Grid.Row="2">
+            <Grid>
+                <Grid VerticalAlignment="Center">
+                    <TextBlock Style="{StaticResource Heading2}" VerticalAlignment="Center">
+                        Copyright ⓒ Aosamesan
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Right">
+                    <Hyperlink NavigateUri="http://twitter.com/bluerein_" Click="Hyperlink_Click" BaselineAlignment="Center">
+                        <Hyperlink.Style>
+                            <Style TargetType="Hyperlink" BasedOn="{StaticResource {x:Type Hyperlink}}">
+                                <Setter Property="TextBlock.TextDecorations" Value="{x:Null}" />
+                            </Style>
+                        </Hyperlink.Style>
+                        <Image Height="35" Width="35" Stretch="Uniform">
+                            <Image.Source>
+                                <DrawingImage>
+                                    <DrawingImage.Drawing>
+                                        <GeometryDrawing Brush="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}">
+                                            <GeometryDrawing.Geometry>
+                                                F1 M 59.7481,27.0756C 58.2644,27.7337 56.6696,28.1784 54.9961,28.3784C 56.704,27.3544 58.0162,25.7329 58.634,23.8008C 57.0352,24.749 55.2645,25.4376 53.3797,25.8086C 51.8705,24.2005 49.7202,23.1958 47.3403,23.1958C 42.771,23.1958 39.0661,26.9003 39.0661,31.4697C 39.0661,32.1181 39.1393,32.7497 39.2804,33.3553C 32.4039,33.0102 26.3071,29.7162 22.2263,24.7102C 21.514,25.9322 21.106,27.3535 21.106,28.8699C 21.106,31.7405 22.5667,34.2731 24.7869,35.7569C 23.4307,35.7138 22.1547,35.3416 21.0392,34.7219C 21.0385,34.7565 21.0385,34.791 21.0385,34.826C 21.0385,38.8348 23.8906,42.1789 27.6756,42.9392C 26.9814,43.1282 26.2504,43.2294 25.4958,43.2294C 24.9626,43.2294 24.4443,43.1775 23.939,43.081C 24.992,46.368 28.0476,48.7603 31.6683,48.8269C 28.8365,51.0462 25.2689,52.369 21.3923,52.369C 20.7245,52.369 20.0659,52.3297 19.4186,52.2533C 23.0802,54.6008 27.4295,55.9708 32.102,55.9708C 47.321,55.9708 55.6436,43.363 55.6436,32.4291C 55.6436,32.0704 55.6353,31.7136 55.6194,31.3586C 57.2362,30.192 58.6389,28.7348 59.7481,27.0756 Z
+                                            </GeometryDrawing.Geometry>
+                                        </GeometryDrawing>
+                                    </DrawingImage.Drawing>
+                                </DrawingImage>
+                            </Image.Source>
+                        </Image>
+                    </Hyperlink>
+                    </TextBlock>
+                </Grid>
+            </Grid>
+            <Grid Margin="0 5">
+                <TextBlock Style="{StaticResource Heading2}">License</TextBlock>
+                <Button Name="ShowLicenseButton" Click="ShowLicense" Focusable="False" HorizontalAlignment="Right">
+                    Microsoft Public License
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>
