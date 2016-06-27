@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModernUINavigationApp1.ViewModel
+namespace BooleanCalculator.ViewModel
 {
     public class NotifyPropertyChanged : INotifyPropertyChanged
     {

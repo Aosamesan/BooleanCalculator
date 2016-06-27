@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModernUINavigationApp1.Dialog
+namespace BooleanCalculator.Dialog
 {
     /// <summary>
     /// Interaction logic for HowToUse.xaml

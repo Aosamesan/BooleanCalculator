@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace ModernUINavigationApp1.Command
+namespace BooleanCalculator.Command
 {
     public class OpenHowToUseCommand : ICommand
     {

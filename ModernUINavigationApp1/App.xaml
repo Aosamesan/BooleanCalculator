@@ -1,7 +1,7 @@
-﻿<Application x:Class="ModernUINavigationApp1.App"
+﻿<Application x:Class="BooleanCalculator.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:vm="clr-namespace:ModernUINavigationApp1.ViewModel"
+             xmlns:vm="clr-namespace:BooleanCalculator.ViewModel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>

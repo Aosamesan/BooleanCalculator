@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ModernUINavigationApp1
+namespace BooleanCalculator
 {
     /// <summary>
     /// Interaction logic for App.xaml

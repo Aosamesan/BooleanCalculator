@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 
-namespace ModernUINavigationApp1.ViewModel
+namespace BooleanCalculator.ViewModel
 {
     public class CalculatorViewModel : NotifyPropertyChanged
     {
@@ -36,7 +36,7 @@ namespace ModernUINavigationApp1.ViewModel
         {
             if (string.IsNullOrWhiteSpace(expr))
                 return;
-            ResultSet = BooleanCalculator.Calculate(expr);
+            ResultSet = BooleanCalculatorLib.BooleanCalculator.Calculate(expr);
             Expression = expr;
             UpdateDataTable();
             RaisePropertyChanged(nameof(ResultArray));

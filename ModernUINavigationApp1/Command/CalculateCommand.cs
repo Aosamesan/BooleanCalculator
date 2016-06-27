@@ -1,4 +1,4 @@
-﻿using ModernUINavigationApp1.ViewModel;
+﻿using BooleanCalculator.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
-namespace ModernUINavigationApp1.Command
+namespace BooleanCalculator.Command
 {
     public class CalculateCommand : ICommand
     {

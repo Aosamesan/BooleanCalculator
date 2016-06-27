@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModernUINavigationApp1.Pages
+namespace BooleanCalculator.Pages
 {
     /// <summary>
     /// Interaction logic for Home.xaml
